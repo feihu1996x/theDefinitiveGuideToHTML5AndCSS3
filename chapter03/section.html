@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML5新增的主体结构元素之section元素</title>
+</head>
+
+<body>
+    <p>
+        section元素用于对网站或应用程序中页面上的内容进行分块。
+    </p>
+    <p>
+        一个section元素通常由内容及其标题组成。不推荐为那些没有标题的内容使用section元素。
+    </p>
+    <p>
+        section元素中的内容应当可以单独存储到数据库中或输出到Word文档中。
+    </p>
+    <p>
+        当一个容器需要被直接定义样式或通过脚本定义行为时，推荐使用div而非section元素。
+    </p>
+
+    <hr>
+
+    <section>
+        <h1>
+            section元素示例
+        </h1>
+        <p>
+            <b>苹果</b>，植物类水果，多次花果……
+        </p>
+    </section>
+
+    <hr>
+
+    <article>
+        <h1>带有section元素的article元素示例</h1>
+        <p><b>苹果</b>，植物类水果，多次花果……</p>
+        <section>
+            <h2>红富士</h2>
+            <p>红富士是从普通富士的芽（枝）变中选育出的着色系富的统称……</p>
+        </section>
+        <section>
+            <h2>国光</h2>
+            <p>国光苹果品，又名小国光、万寿。原产美国，1600年发现的偶然实生苗……</p>
+        </section>
+    </article>
+
+    <hr>
+
+    <section>
+        <h1>包含article元素的section元素示例</h1>
+        <article>
+            <h2>苹果</h2>
+            <p>苹果，植物类水果，多次花果……</p>
+        </article>
+        <article>
+            <h2>橘子</h2>
+            <p>橘子，是芸香科柑橘属的一种水果……</p>
+        </article>
+        <article>
+            <h2>香蕉</h2>
+            <p>香蕉，属于芭蕉科芭蕉属植物，又指其果实，热带地区广泛栽培食用……</p>
+        </article>
+    </section>
+
+    <hr>
+
+    <p>
+        如果一块内容相对来说比较独立、完整的时候，应该使用article元素，但是如果想将一块内容分成几段的时候，应该使用section元素。
+    </p>    
+</body>
+
+</html>
