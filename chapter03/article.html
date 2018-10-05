@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>HTML5新增的主体结构元素之article元素</title>
+</head>
+
+<body>
+	<p>
+		article元素代表文档、页面或应用程序中独立的、完整的、可以独自被外部引用的内容。
+	</p>
+	<p>
+		一个article元素通常有它自己的标题（一般放在一个header元素里面），有时还有自己的脚注。
+	</p>
+
+	<hr>
+
+	<article>
+		<header>
+			<h1>文章标题：article元素示例</h1>
+			<p>发表日期：
+				<time pubdate="pubdate">2018/10/05</time>
+			</p>
+		</header>
+		<p>
+			文章正文
+		</p>
+		<footer>
+			<p>
+				<small>
+					文章脚注
+				</small>
+			</p>
+		</footer>
+	</article>
+
+	<hr>
+
+	<p>
+		article元素是可以嵌套使用的，内层的内容在原则上需要与外层的内容相关联。
+	</p>
+
+	<hr>
+
+	<article>
+		<header>
+			<h1>文章标题：article元素嵌套示例</h1>
+			<p>发表日期：
+				<time pubdate="pubdate" datetime="2018/10/05">2018/10/05</time>
+			</p>
+		</header>
+		<p>
+			文章正文
+		</p>
+		<section>
+			<h2>文章评论</h2>
+			<article>
+				<header>
+					<h3>发表者：feihu1996x</h3>
+					<p>
+						<time pubdate="pubdate" datetime="2018-10-05T19：10-08：00">1小时前</time>
+					</p>
+				</header>
+				<p>
+					这篇文章写得真好
+				</p>
+			</article>
+			<article>
+				<header>
+					<h3>发表者：feihu1996x</h3>
+					<p>
+						<time pubdate="pubdate" datetime="2018-10-05T19：10-08：00">1小时前</time>
+					</p>
+				</header>
+				<p>
+					这篇文章写得真烂
+				</p>
+			</article>
+		</section>
+		<footer>
+			<p>
+				<small>
+					文章脚注
+				</small>
+			</p>
+		</footer>
+	</article>
+
+	<hr>
+
+	<p>
+		article元素也可以用来表示插件，它的作用是使插件看起来好像内嵌在页面中一样。
+	</p>
+
+	<hr>
+
+	<article>
+		<h1>
+			用article元素表示插件
+		</h1>
+		<object>
+			<param name="allowFullScreen" value="true" />
+			<embed src="#" width="600" height="395" />
+		</object>
+	</article>
+
+</body>
+
+</html>
