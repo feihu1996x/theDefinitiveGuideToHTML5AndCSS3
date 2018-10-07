@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML5新增的主体结构元素之nav元素</title>
+</head>
+
+<body>
+    <p>
+        nav元素是一个可以用作页面导航的链接组，其中的导航元素链接到其他页面或当前页面的其他部分。
+    </p>
+    <p>
+        并不是所有的链接组都要被放进nav元素，只需要将主要的、基本的链接组放进nav元素即可。
+    </p>
+    <p>
+        一个页面中可以拥有多个nav元素，作为页面整体或不同部分的导航。
+    </p>
+    <hr>
+    <h1>nav元素示例</h1>
+    <nav>
+        <ul>
+            <li><a href="/">主页</a></li>
+            <li><a href="/events">开发文档</a></li> ……more……
+        </ul>
+    </nav>
+    <article>
+        <header>
+            <h1>HTML 5与CSS 3的历史</h1>
+            <nav>
+                <ul>
+                    <li><a href="#HTML 5">HTML 5的历史</a></li>
+                    <li><a href="#CSS 3">CSS 3的历史</a></li> ……more……
+                </ul>
+            </nav>
+        </header>
+        <section id="HTML 5">
+            <h1>HTML 5的历史</h1>
+            <p>讲述HTML 5的历史的正文</p>
+        </section>
+        <section id="CSS 3">
+            <h1>CSS 3的历史</h1>
+            <p>讲述CSS 3的历史的正文</p>
+        </section> ……more…… <footer>
+            <p> <a href="?edit">编辑</a>| <a href="?delete">删除</a>| <a href="?rename">重命名</a> </p>
+        </footer>
+    </article>
+    <footer>
+        <p><small>版权所有：xxx</small></p>
+    </footer>
+</body>
+
+</html>
