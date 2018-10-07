@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML5新增的主体结构元素之time元素与微格式</title>
+</head>
+
+<body>
+    <p>
+        微格式是一种利用HTML的class属性来对网页添加附加信息的方法，附加信息例如新闻事件发生的日期和时间、个人电话号码、企业邮箱等。
+    </p>
+    <p>
+        time元素用于无歧义地、明确地对机器的日期和时间进行编码，并且以让人易读的方式来展现它。
+    </p>
+    <p>
+        time元素代表24小时中的某个时刻或某个日期，表示时刻时允许带时差。
+    </p>
+    <p>
+        time元素可以定义很多格式的日期和时间。
+    </p>
+
+    <hr>
+
+    <p>
+        datetime属性：<br>
+        <ul>
+            <li>编码时机器读到的部分在datetime属性里</li>
+            <li>元素的开始标记与结束标记中间的部分是显示在网页上的</li>
+            <li>datetime属性中日期与时间之间要用“T”文字分隔，“T”表示时间</li>
+            <li>时间加上Z文字表示给机器编码时使用UTC标准时间</li>
+            <li>如果要机器编码另一地区时间，可以添加时差</li>
+        </ul>
+    </p>
+
+    <hr>
+
+    <time datetime="2018-11-13">2018年11月13日</time>
+    <time datetime="2018-11-13">11月13日</time>
+    <time datetime="2018-11-13">我的生日</time>
+    <time datetime="2018-11-13T20：00">我生日的晚上8点</time>
+    <time datetime="2018-11-13T20：00Z">我生日的晚上8点</time>
+    <time datetime="2018-11-13T20：00+09：00">我生日的晚上8点的美国时间</time>
+
+    <hr>
+
+    <p>
+        pubdate属性是一个可选的、boolean值的属性，它可以用到article元素中的time元素上，意思是time元素代表了文章（artilce元素的内容）或整个网页的发布日期。
+    </p>
+
+    <hr>
+
+    <article>
+        <header>
+            <h1>
+                关于<time datetime=2018-10-29>10月29日</time>的舞会通知
+            </h1>
+            <p>
+                发布日期：<time datetime=2018-10-11 pubdate>2018年10月11日</time>
+            </p>
+        </header>
+        <p>
+            大家好：我是法律系3年级学生代表，……（关于舞会的通知）
+        </p>
+    </article>
+</body>
+
+</html>
