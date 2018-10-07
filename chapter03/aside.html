@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML5新增的主体结构元素之aside元素</title>
+</head>
+
+<body>
+    <p>
+        aside元素用来表示当前页面或文章的附属信息部分，它可以包含与当前页面或主要内容相关的引用、侧边栏、广告、导航条，以及其他类似的有别于主要内容的部分。
+    </p>
+    <p>
+        aside元素可以被包含在article元素中作为主要内容的附属信息部分，其中的内容可以是与当前文章有关的参考资料、名词解释，等等。
+    </p>
+
+    <hr>
+
+    <header>
+        <h1>F#入门</h1>
+    </header>
+    <article>
+        <h1>第四节词法闭包</h1>
+        <p>lambda表达式可以创建词法闭包……（文章正文）</p>
+        <aside>
+            <！--因为这个aside元素被放置在一个article元素内部， 所以分析器将这个aside元素的内容理解成是和article元素的内容相关联的。-->
+                <h1>名词解释</h1>
+                <dl> 
+                    <dt>F#</dt>
+                    <dd>F#为.Net2010中引入的新型函数型编程语言</dd>
+                </dl>
+                <dl> 
+                    <dt>词法闭包</dt>
+                    <dd>词法闭包是指，将创建lambda表达式时的环境保存起来……（详细解释）</dd>
+                </dl>
+        </aside>
+    </article>
+
+    <hr>
+
+    <p>
+        aside元素可以在article元素之外使用，作为页面或站点全局的附属信息部分。最典型的形式是侧边栏，其中的内容可以是友情链接，博客中其他文章列表、广告单元等。
+    </p>
+
+    <hr>
+
+    <aside>
+        <nav>
+            <h2>评论</h2>
+            <ul>
+                <li> <a href="javascript:void(0);">erway</a>10-24 14：25 </li>
+                <li> <a href="javascript:void(0);">太阳雨</a>10-22 23：48<br /><a href="javascript:void(0);">
+                        顶，拜读一下</a> </li>
+                <li> <a href="javascript:void(0);">新浪官博</a>08-12 08：50<br /> <a href="javascript:void(0);">恭喜！您已经成功开通了博客</a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+</body>
+
+</html>
