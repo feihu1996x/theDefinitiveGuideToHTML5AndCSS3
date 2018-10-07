@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML5文档结构规划</title>
+</head>
+
+<body>
+    <p>
+        显式编排内容区块:明确使用section等元素创建文档结构，在每个内容区块内使用标题（h1～h6、hgroup等）
+    </p>
+
+    <hr>
+
+    <h1>网页级内容区块标题</h1>
+    <p>网页级内容区块的正文</p>
+    <section>
+        <h2>section级内容区块的标题</h2>
+        <p>section级内容区块的正文</p>
+    </section>
+
+    <hr>
+
+    <p>
+        隐式编排内容区块:不明确使用section等元素，由HTML5分析器根据页面中所书写的各级标题（h1～h6、hgroup）等把内容区块自动创建出来。
+    </p>
+    <p>
+        隐式编排时按如下规则自动生成内容区块： <br>
+        <ul>
+            <li>
+                如果新出现的标题比上一个标题级别低，生成下级内容区块。
+            </li>
+            <li>
+                如果新出现的标题比上一个标题级别高或级别相等，生成新的内容区块。
+            </li>
+        </ul>
+    </p>
+
+    <hr>
+
+    <h1>网页级内容区块标题</h1>
+    <p>网页级内容区块的正文</p>
+    <!--
+        分析器根据h2等元素判断自动生成内容区块
+    -->
+    <h2>section级内容区块的标题</h2>
+    <p>section级内容区块的正文</p>
+
+    <hr>
+
+    <section>
+        <h2>section级别的内容区块的标题</h2>
+        <p>section级别的内容区块的正文</p>
+        <!--
+            因为下面的标题级别比上一个标题级别高，所以自动创建新的内容区块
+        -->
+        <h1>新的section级别的内容区块的标题</h1>
+        <p>新的section级别的内容区块的正文</p>
+    </section>
+
+    <hr>
+
+    <p>
+        不同的内容区块可以使用相同级别的标题。
+    </p>
+
+    <hr>
+
+    <h1>网页的标题</h1>
+    <article>
+        <header>
+            <hgroup>
+                <h1>文章标题</h1>
+                <h2>文章子标题</h2>
+            </hgroup>
+            <p>文章正文</p>
+        </header>
+    </article>
+</body>
+
+</html>
