@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML5新增的非主体结构元素之hgroup元素</title>
+</head>
+<body>
+    <p>
+        hgroup元素是将标题及其子标题进行分组的元素。
+    </p>
+    <p>
+        hgroup元素通常会将h1～h6元素进行分组，譬如一个内容区块的标题及其子标题算一组。
+    </p>
+
+    <hr>
+
+    <article>
+        <header>
+            <h1>通常，如果文章只有一个主标题，是不需要hgroup元素的</h1>
+            <p>
+                <time datetime="2018-03-20">2018年10月29日</time>
+            </p>
+        </header>
+        <p>文章正文</p>
+    </article>
+
+    <hr>
+
+    <article>
+        <header>
+            <hgroup>
+                <h1>如果文章有主标题，主标题下有子标题，就需要使用hgroup元素</h1>
+                <h2>文章子标题</h2>
+            </hgroup>
+            <p>
+                <time datetime="2018-03-20">2018年10月29日</time>
+            </p>
+        </header>
+        <p>文章正文</p>
+    </article>
+</body>
+</html>
