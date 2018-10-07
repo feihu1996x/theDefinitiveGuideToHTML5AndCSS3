@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML5新增结构元素浏览器兼容性处理</title>
+</head>
+
+<body>
+    <p>
+        存在部分老旧浏览器尚未对HTML5中新增的结构元素提供支持，为确保兼容性，需要使用CSS追加如下声明，目的是通知浏览器页面中使用的HTML 5中新增元素都是以块方式显示的：<br>
+        <pre>
+            // 追加block声明
+            article, 
+            aside, 
+            dialog, 
+            figure, 
+            footer, 
+            header, 
+            legend, 
+            nav,
+            section{
+                display:block;
+            }
+
+            // 正常使用样式
+            nav{
+                float;left;
+                width:20%;
+            }
+            article{
+                float:right;
+                width:79%;
+            }
+        </pre>
+    </p>
+
+    <hr>
+
+    <p>
+        IE8及之前的浏览器是不支持用CSS的方法来使用这些尚未支持的结构元素的，为了在Internet Explorer浏览器中也能正常使用这些新增结构元素，需要使用JavaScript脚本。
+        <pre>
+            document.createElement("header");
+            document.createElement("nav");
+            document.createElement("article");
+            document.createElement("footer");
+        </pre>
+    </p>
+
+</body>
+
+</html>
