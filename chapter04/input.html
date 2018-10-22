@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML5表单新增的input元素类型</title>
+    <style>
+        input[type="search"]{
+            appearance: textfield;
+            -moz-appearance: textfield;  /* Firefox */
+            -webkit-appearance: textfield;  /* Safari 和 Chrome */    
+        }    
+    </style>
+</head>
+<body>
+    <p>date类型</p>
+    <input name="date1" type="date" value="2018-10-22">
+    <p>time类型</p>
+    <input name="time1" type="time" value="18:43">
+    <p>datetime类型</p>
+    <input name="datetime1" type="datetime">
+    <p>datetime-local类型</p>
+    <input name="datetime-loacal1" type="datetime-local">
+    <p>month类型</p>
+    <input name="month1" type="month" value="2018-10">
+    <p>week类型</p>
+    <input name="week1" type="week" value="2018-W40">
+    <p>number类型</p>
+    <input name="number1" type="number" value="25" min="10" max="100" step="5">
+    <p>range类型</p>
+    <input name="range1" type="range" value="25" min="0" max="100" step="5">
+    <p>search类型</p>
+    <input name="search1" type="search">
+    <p>tel类型</p>
+    <input name="tel1" type="tel">
+    <p>color类型</p>
+    <input name="color1" type="color">
+</body>
+</html>
